@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Post from "./Post"
 const TrendCard = () => {
   return (
-    <div>TrendCard</div>
+    <div>
+      
+      <Post/>
+    </div>
   )
 }
 
