@@ -1,28 +1,37 @@
 import React from 'react'
 const styles = {
-  channelImage: `w-14 h-14 object-cover`,
+  channelImage: `w-16 h-16 object-cover`,
   channelHeader: `bg-blue-400 text-center  rounded-full text-3xl py-2 px-1 font-serif`,
 }
-const channelData = {
-  name: 'Channel Name',
-  description: 'Channel Description',
-  image: 'https://via.placeholder.com/150',
-  members: [
-    {
-      name: 'User Name',
-      image: 'https://via.placeholder.com/150'
-    },
-    {
-      name: 'User Name',
-      image: 'https://via.placeholder.com/150'
-    },
-    {
-      name: 'User Name',
-      image: 'https://via.placeholder.com/150'
-    },
-  ],
 
-}
+
+const data=[
+  {
+    name: 'python',
+    image: 'https://via.placeholder.com/150',
+    description: 'python is a programming language',
+  },
+  {
+    name: 'java',
+    image: 'https://via.placeholder.com/150',
+    description: 'java is a programming language',
+  },
+  {
+    name: 'javascript',
+    image: 'https://via.placeholder.com/150',
+    description: 'javascript is a programming language',
+  },
+  {
+    name: 'c++',
+    image: 'https://via.placeholder.com/150',
+    description: 'c++ is a programming language',
+  },
+  {
+    name: 'c',
+    image: 'https://via.placeholder.com/150',
+    description: 'c is a programming language',
+  },
+]
 const channel =() =>{
   return(
     <div>
@@ -33,22 +42,27 @@ const channel =() =>{
 const ChannelCard = () => {
   return (
     <div className='pt-20 '>
-      <div>
+      <div className='py-5'>
         <h1 className={styles.channelHeader}>Channel</h1>
       </div>
-
-      <div className='flex flex-row py-5  my-5  w-[300px] justify-center'>
+{data.map(item=>{
+  return(
+    <div className='flex flex-row     w-[300px] justify-center'>
         <div className='flex flex-row'>
-          <div className='flex flex-row justify-center'>
-            <img className={styles.channelImage} src={channelData.image} alt='channel' />
+          <div className='justify-center'>
+            <img className={styles.channelImage} src={item.image} alt='channel' />
           </div>
           <div className='flex flex-col px-2 justify-center'>
-            <h1 className='text-3xl font-serif'>{channelData.name}</h1>
+            <h1 className='text-xl font-serif'>{item.name}</h1>
           
-            <p className='text-xl font-serif'>{channelData.description}</p>
+            <p className='text-lg font-serif'>{item.description}</p>
           </div>
         </div>
         </div>
+  )
+})}
+    
+      
     </div>
   )
 }
