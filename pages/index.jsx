@@ -13,12 +13,12 @@ function  Home(){
         <ChannelCard />
         <LivemeetsCard />
       </div>
-      <div>center
+      <div>
         <TrendCard />
         <div>MessageCallout</div>
       </div>
       <div>
-        
+
         <div>OnlineCard</div>
         <div>chatrrom</div>
       </div>
