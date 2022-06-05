@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext, useEffect, useState } from 'react'
 import { TwitterContext } from '../../context/TwitterContext'
 import { BsArrowLeftShort } from 'react-icons/bs'
-import { useRouter } from 'next/router
+import { useRouter } from 'next/router'
 const style = {
     wrapper: `border-[#38444d] border-b`,
     header: `py-1 px-3 mt-2 flex items-center`,
